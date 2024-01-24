@@ -90,13 +90,13 @@ async function drawCards(cardNumbers, fieldSide) {
         const randomIdCard = await getRandomCardId();
         const cardImage = await createCardImage(randomIdCard, fieldSide);
         
-        document.getElementById(fieldSide).appendChild(cardImage)
+        document.getElementById(fieldSide).appendChild(cardImage);
     };
 }
 
 function init() {
-    drawCards(5, "playerSides.player1");
-    drawCards(5, "playerSides.computer");
+    drawCards(5, playerSides.player1);
+    drawCards(5, playerSides.computer);
 }
 
 init();
