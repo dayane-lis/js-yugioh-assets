@@ -14,8 +14,6 @@ const state = {
         computer: document.getElementById("computer-field-card"),
     },
     playerSides:{
-        // cardPlayer: "player-field-card",
-        // cardComputer: "computer-field-card",
         player1: "player-cards",
         player1BOX: document.querySelector("#player-cards"),
         computer: "computer-cards",
@@ -193,13 +191,13 @@ async function playAudio(status) {
 }
 
 function init() {
-    const bgm = document.getElementById("bgm");
-    bgm.play();
-
     ShowHiddenCardFieldsImages(false);
 
     drawCards(5, state.playerSides.player1);
     drawCards(5, state.playerSides.computer); 
+
+    const bgm = document.getElementById("bgm");
+    bgm.play();
 }
 
 init();
